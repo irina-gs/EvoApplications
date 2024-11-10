@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EvoApplications';
+  arrayCats = [
+    {
+      name: 'Cat_1'
+    },
+    {
+      name: 'Cat_2'
+    },
+    {
+      name: 'Cat_3'
+    },
+  ]
+
+  dateNow = new Date()
 }
