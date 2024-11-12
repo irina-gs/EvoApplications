@@ -1,0 +1,12 @@
+<div class="container p-3">
+    <div class="mb-2">
+        <progressbar [value]="progressValue" type="success" [striped]="true" [animate]="true">
+            <b>{{progressValue}}%</b>
+        </progressbar>
+    </div>
+    <div class="d-flex justify-content-center gap-2">
+        <button type="button" class="btn btn-sm btn-outline-success" (click)="startProgress()">Старт</button>
+        <button type="button" class="btn btn-sm btn-outline-warning" (click)="stopProgress()">Стоп</button>
+        <button type="button" class="btn btn-sm btn-outline-danger" (click)="resetProgress()">Сброс</button>
+    </div>
+</div>
