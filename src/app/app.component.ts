@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './interfaces/book';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EvoApplications';
+  books: Book[] = [
+    {
+      title: 'Ревизор',
+      author: 'Н.Гоголь'
+    },
+    {
+      title: 'Обломов',
+      author: 'И.Гончаров'
+    },
+    {
+      title: 'Гроза',
+      author: 'А.Островский'
+    },
+  ]
+
+  createdBook: Book = {
+    title: null,
+    author: null
+  }
+
+  addBook() {
+    this.books.push({
+      title: this.createdBook.title,
+      author: this.createdBook.author
+    })
+  }
 }
