@@ -1,0 +1,23 @@
+<ng-container *ngTemplateOutlet="table"></ng-container>
+
+<ng-template #table>
+    <div class="container">
+        <h1 class="display-6 mt-5">Реестр книг</h1>
+        <table class="table table-striped pt-10">
+            <thead>
+                <tr>
+                    <th scope="col">Номер</th>
+                    <th scope="col">Название книги</th>
+                    <th scope="col">Автор</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books; index as i">
+                    <td scope="row">{{i + 1}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-template>
