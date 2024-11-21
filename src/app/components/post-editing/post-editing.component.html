@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2 class="display-6">Редактирование поста</h2>
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Название</label>
+            <input type="text" [(ngModel)]="post.title" name="title" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Содержание</label>
+            <textarea [(ngModel)]="post.body" name="body" class="form-control" id="floatingTextarea2"></textarea>
+        </div>
+        <div class="d-flex gap-2">
+            <button type="submit" [routerLink]="['/posts', post.id]" (click)="updatePost()" class="btn btn-primary">Сохранить</button>
+            <button routerLink="../" class="btn btn-secondary">Отмена</button>
+        </div>
+    </form>
+</div>

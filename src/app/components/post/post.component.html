@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="display-6 mt-5">Пост</h2>
+    <table class="table table-striped pt-10">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">UserId</th>
+                <th scope="col">Название</th>
+                <th scope="col">Содержание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">{{post.id}}</td>
+                <td>{{post.userId}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button routerLink="editing" class="btn btn-primary">Редактировать</button>
+</div>
+
+<router-outlet></router-outlet>

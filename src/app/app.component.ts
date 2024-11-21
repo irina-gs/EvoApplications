@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoleService } from './services/role.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EvoApplications';
+  constructor(public roleService: RoleService) { }
+
+  setAdminRole() {
+    this.roleService.role = 'admin'
+  }
+
+  setUserRole() {
+    this.roleService.role = 'user'
+  }
 }
