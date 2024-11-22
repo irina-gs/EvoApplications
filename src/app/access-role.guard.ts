@@ -14,7 +14,7 @@ export class AccessRoleGuard implements CanActivateChild {
 
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot) {
     if (this.roleService.role === 'admin') {
       return true
     } else {
