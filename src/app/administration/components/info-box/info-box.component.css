@@ -1,0 +1,16 @@
+.box-container {
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+}
+
+.box-container p {
+    color: var(--text-color-auth);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.box-container h3 {
+    color: var(--text-color-dark);
+    font-weight: 600;
+    font-size: 1.875rem;
+}

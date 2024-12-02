@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 class="title text-center">Почему именно мы?</h2>
+    <div class="row row-cols-md-4 row-cols-1">
+        <div *ngFor="let item of itemList" class="col d-flex align-items-start">
+            <img src="../../../assets/images/why-choose-us/icon-check.svg" class="item-icon" alt="Check" width="24" height="24">
+            <div>
+                <h5 class="item-title">{{item.title}}</h5>
+                <p class="item-text">{{item.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

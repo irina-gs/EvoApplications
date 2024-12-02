@@ -1,0 +1,11 @@
+<div class="container-notification d-flex gap-3 align-items-start">
+    <img *ngIf="isSuccess" src="../../../assets/images/notification/icon-success.svg" alt="Success" width="24" height="24">
+    <img *ngIf="!isSuccess" src="../../../assets/images/notification/icon-unsuccess.svg" alt="Unsuccess" width="40" height="40">
+    <div>
+        <p class="notification-title m-0">{{title}}</p>
+        <p class="notification-message m-0">{{message}}</p>
+    </div>
+    <button (click)="hide()" class="btn btn-link p-0">
+        <img src="../../../assets/images/notification/icon-dismiss-button.svg" alt="Dismiss" width="20" height="20">
+    </button>
+</div>

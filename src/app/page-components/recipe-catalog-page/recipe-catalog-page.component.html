@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row justify-content-start">
+        <div *ngFor="let recipe of recipeList" class="col-md-4 col-12 my-3">
+            <div class="card-recipe h-100">
+                <app-recipe-card [recipe]="recipe"></app-recipe-card>
+            </div>
+        </div>
+    </div>
+</div>

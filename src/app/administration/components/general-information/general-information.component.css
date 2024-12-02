@@ -1,0 +1,16 @@
+.container {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+}
+
+.badge {
+    background-color: var(--background-color-light-purple);
+    color: var(--text-color-blue);
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.boxes-container {
+    margin-top: 2.875rem;
+}

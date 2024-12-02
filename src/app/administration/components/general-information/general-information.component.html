@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+            <app-user-card
+                [title]="user.firstName + ' ' + user.lastName"
+                [text]="'Создан ' + (user.createdOn | date:'d MMMM yyyy':'GMT+3') + ' года'"
+                [avatar]="user.avatar"
+                [comment]="user.username"
+            ></app-user-card>
+
+            <div class="badge h-100">
+                <img src="../../../../assets/images/user/icon-dot.svg" alt="Dot" class="me-1" width="8" height="8">
+                <ng-container [ngSwitch]="user.role">
+                    <ng-container *ngSwitchCase="'user'"><span>Пользователь</span></ng-container>
+                    <ng-container *ngSwitchCase="'admin'"><span>Администратор</span></ng-container>
+                </ng-container>
+            </div>
+        </div>
+
+        <button (click)="onDelete(user.id)" class="btn-delete-custom h-100">Удалить</button>
+    </div>
+
+    <div class="boxes-container row text-center">
+        <div class="col-4">
+            <app-info-box [title]="'Всего рецептов'" [value]="user.posts.length.toString()"></app-info-box>
+        </div>
+        <div class="col-4">
+            <app-info-box [title]="'Всего комментариев'" [value]="user.comments.length.toString()"></app-info-box>
+        </div>
+        <div class="col-4">
+            <app-info-box [title]="'Статус'" [value]="user.isActive ? 'Активен' : 'Не активен'"></app-info-box>
+        </div>
+    </div>
+    
+</div>

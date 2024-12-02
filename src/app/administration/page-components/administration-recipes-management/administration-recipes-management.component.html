@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="tab-content">
+        <table class="table table-striped mb-0">
+            
+            <thead class="table-head">
+                <tr class="align-middle">
+                    <th class="col-2">НАЗВАНИЕ РЕЦЕПТА</th>
+                    <th class="col-3">КРАТКОЕ ОПИСАНИЕ</th>
+                    <th class="col-3">ID РЕЦЕПТА</th>
+                    <th class="col-2">КАТЕГОРИЯ</th>
+                    <th class="col-2"></th>
+                </tr>
+            </thead>
+
+            <tbody class="table-body">
+                <tr *ngFor="let recipe of recipeList" class="align-middle">
+                    <td class="title">{{recipe.title}}</td>
+                    <td class="text">{{recipe.body}}</td>
+                    <td class="text">{{recipe.id}}</td>
+                    <td class="text">{{recipe.tags.join(', ')}}</td>
+                    <td>
+                        <a [routerLink]="['/admin/recipes', recipe.id]" class="ms-4">
+                            <img src="../../../../assets/images/administration/recipes-management/icon-edit.svg" alt="Edit" width="24" height="24">
+                        </a>
+                        <a (click)="onDelete(recipe.id ?? '')" class="ms-4">
+                            <img src="../../../../assets/images/administration/recipes-management/icon-delete.svg" alt="Delete" width="24" height="24">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

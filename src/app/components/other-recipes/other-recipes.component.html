@@ -1,0 +1,6 @@
+<div class="container">
+    <h1 class="title">Прочие рецепты</h1>
+    <div *ngFor="let recipe of recipeList">
+        <app-recipe-card-simple [recipe]="recipe" class="me-4"></app-recipe-card-simple>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.page-container {
+    padding: 6.25rem 0;
+}
+
+hr {
+    border-color: var(--color-border-auth);
+}

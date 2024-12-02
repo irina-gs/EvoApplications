@@ -1,0 +1,38 @@
+a:hover .card,
+a:active .card {
+    transform: scale(1.05);
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    margin: 1.25rem;
+}
+
+.favorite-btn:hover,
+.favorite-btn:active {
+    filter: brightness(0.8);
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.card-image {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-footer {
+    background-color: transparent;
+    border: none;
+}

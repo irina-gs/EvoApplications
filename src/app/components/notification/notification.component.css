@@ -1,0 +1,47 @@
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.container-notification {
+    font-size: 0.875rem;
+    padding: 1rem;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    max-width: 24rem;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    position: fixed;
+    top: 1rem;
+    right: 0;
+    z-index: 9999;
+    animation: slideInFromRight 0.5s ease, slideOutToRight 1s 4.5s forwards;
+}
+
+.notification-title {
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+
+.notification-message {
+    color: var(--text-color-auth);
+    font-weight: 400;
+}

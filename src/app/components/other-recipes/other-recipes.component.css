@@ -1,0 +1,10 @@
+.container {
+    margin-top: 9.375rem;
+}
+
+.title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}

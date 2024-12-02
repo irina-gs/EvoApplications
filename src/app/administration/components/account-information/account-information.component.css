@@ -1,0 +1,39 @@
+.container {
+    margin-bottom: 3.125rem;
+}
+
+.tab-content {
+    border: 1px solid var(--color-border-form);
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+    overflow: hidden;
+}
+
+.table-head th {
+    padding: 1.25rem 1.5rem;
+    color: var(--text-color-dark);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.table-body .title {
+    padding: 1.25rem 1.5rem;
+    color: var(--text-color-auth);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.table-body .text {
+    padding: 1.25rem 1.5rem;
+    color: var(--text-color-dark);
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.table-body td {
+    padding: 1.25rem 1.5rem;
+}
+
+.table-body .last-row {
+    padding-bottom: 5rem;
+}

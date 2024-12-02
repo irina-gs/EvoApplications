@@ -1,0 +1,34 @@
+.container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.form-container {
+    margin: 4rem 0;
+    padding: 5rem;
+    background-color: var(--background-light-blue);
+    border-radius: 24px;
+}
+
+.title {
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+
+.text {
+    color: var(--text-description-form);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+.input-group input {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.btn-primary-custom {
+    font-size: 1rem;
+    font-weight: 500;
+}

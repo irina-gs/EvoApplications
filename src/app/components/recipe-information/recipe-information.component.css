@@ -1,0 +1,66 @@
+.recipe-title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.border-start {
+    height: 3.125rem;
+    border-color: var(--color-black-10);
+}
+
+.action-button {
+    margin-left: 1.875rem;
+}
+
+.recipe-image {
+    border-radius: 30px;
+    overflow: hidden;
+    max-height: 37.5rem;
+}
+
+.energy-value-container {
+    background-color: var(--background-color);
+    border-radius: 30px;
+    padding: 2rem 2rem 1.5rem 2rem !important;
+}
+
+.energy-value-title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.list-group-item {
+    background-color: var(--background-color);
+    border-color: var(--color-black-10);
+}
+
+.list-group-item:last-child {
+    border-bottom: 1px solid var(--color-black-10);
+}
+
+.list-group-item span.title {
+    color: var(--color-black-60);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.list-group-item span.value {
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.energy-value-footer {
+    color: var(--color-black-60);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.recipe-description {
+    margin-top: 5rem;
+    color: var(--color-black-60);
+    font-weight: 400;
+    font-size: 1rem;
+}

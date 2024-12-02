@@ -1,0 +1,39 @@
+<div class="page-container">
+    <app-recipe-information [recipe]="recipe"></app-recipe-information>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-12">
+                <app-step-list
+                    [title]="'Ингредиенты'"
+                    [subtitle]="'Что вам пригодиться'"
+                    [items]="recipe.ingredients ?? []"
+                    [isNumber]="false"
+                ></app-step-list>
+            </div>
+
+            <div class="col-lg-4 col-12">
+                <app-other-recipes [recipeList]="recipesOther"></app-other-recipes>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <app-step-list
+                    [title]="'Шаги приготовления'"
+                    [items]="recipe.cookingSteps ?? []"
+                    [isNumber]="true"
+                ></app-step-list>
+            </div>
+        </div>
+    </div>
+
+    <app-suggested-recipes 
+        [title]="'Возможно вам понравятся эти рецепты'"
+        [recipeList]="recipesSuggested"
+    ></app-suggested-recipes>
+
+    <app-comment-list [commentList]="recipe.comments ?? []"></app-comment-list>
+</div>

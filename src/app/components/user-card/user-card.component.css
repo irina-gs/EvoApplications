@@ -1,0 +1,23 @@
+.avatar {
+    object-fit: cover;
+    object-position: center;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-black);
+}
+
+.user-text {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--text-color-user-card);
+}
+
+.comment {
+    margin-left: 3.25rem;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--color-black);
+}

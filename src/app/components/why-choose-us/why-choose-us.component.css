@@ -1,0 +1,27 @@
+.container {
+    margin-top: 9.375rem;
+    margin-bottom: 5.375rem;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: var(--text-color-dark);
+    margin-bottom: 5rem;
+}
+
+.item-icon {
+    margin-right: 0.75rem;
+}
+
+.item-title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--text-color-dark);
+}
+
+.item-text {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color-auth);
+}

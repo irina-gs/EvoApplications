@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="title">Комментарии</h1>
+    <div *ngFor="let comment of commentList" class="comment-container">
+        <app-user-card
+            [title]="comment.user?.firstName + ' ' + comment.user?.lastName"
+            [text]="(comment.updatedOn | date:'dd.MM.yyyy HH:mm':'GMT+3') || ''"
+            [avatar]="comment.user?.avatar ?? ''"
+            [comment]="comment.text"
+        ></app-user-card>
+    </div>
+    <p class="new-comment-title">Ваш комментарии</p>
+    <div class="position-relative">
+        <textarea required [(ngModel)]="newComment.text" #commentNGModel="ngModel" name="new-comment" class="form-control new-comment" rows="5"></textarea>
+        <button type="submit" [disabled]="commentNGModel.invalid" (click)="addComment()" class="btn-secondary-custom position-absolute bottom-0 end-0 mb-2 me-2">
+            <img src="../../../assets/images/comment/icon-mail.svg" alt="Mail" class="me-2" width="16" height="16">
+            Отправить
+        </button>
+    </div>
+</div>

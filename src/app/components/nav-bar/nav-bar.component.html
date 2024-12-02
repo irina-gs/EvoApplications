@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container align-items-center">
+
+        <a routerLink="/" class="navbar-brand">Foodie</a>
+
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div class="navbar-nav mx-auto gap-5">
+                <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Главная</a>
+                <a routerLink="/recipes" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Каталог рецептов</a>
+            </div>
+
+            <div class="navbar-nav">
+                <button *ngIf="role === 'guest'" routerLink="/authorization" class="btn-primary-custom mx-auto">Вход в аккаунт</button>
+
+                <ng-container *ngIf="role === 'user' || role === 'admin'">
+
+                    <button routerLink="/create-recipe" class="btn btn-link p-0 me-3">
+                        <img src="../../../assets/images/nav-bar/icon-create-recipe.svg" alt="Create recipe" width="25" height="25">
+                    </button>
+
+                    <div class="dropdown ms-3">
+
+                        <button class="nav-link p-0" data-bs-toggle="dropdown" aria-expanded="false">
+                            <app-user-card [title]="firstName + ' ' + lastName" [text]="role" [avatar]="avatar"></app-user-card>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <li><p class="dropdown-item text-dark m-0">Вы вошли как <br><span>{{username}}</span></p></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item">Настройки аккаунта</a></li>
+                            <li *ngIf="role === 'admin'"><a routerLink="/admin/users" class="dropdown-item">Администрирование</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a (click)="exit()" class="dropdown-item text-red">Выход</a></li>
+                        </ul>
+
+                    </div>
+
+                </ng-container>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>

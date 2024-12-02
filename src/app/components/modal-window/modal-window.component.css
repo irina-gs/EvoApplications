@@ -1,0 +1,23 @@
+.modal-container {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.modal-title {
+    color: var(--text-color-dark);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.modal-message {
+    color: var(--text-color-auth);
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.modal-footer {
+    background-color: var(--color-modal-window);
+}
+
+.btn-primary-custom {
+    font-weight: 500;
+}

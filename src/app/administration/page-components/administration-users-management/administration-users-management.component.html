@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="tab-content">
+        <table class="table mb-0">
+            
+            <thead class="table-head">
+                <tr class="align-middle">
+                    <th  class="col-8">НАИМЕНОВАНИЕ</th>
+                    <th>СТАТУС</th>
+                    <th>РОЛЬ</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody class="table-body">
+                <tr *ngFor="let user of userList" class="align-middle">
+                    <td>
+                        <app-user-card 
+                            [title]="user.firstName + ' ' + user.lastName" 
+                            [text]="user.username" 
+                            [avatar]="user.avatar"
+                        ></app-user-card>
+                    </td>
+
+                    <td><span class="badge">{{user.isActive ? 'Активен' : 'Не активен'}}</span></td>
+
+                    <td>
+                        <ng-container [ngSwitch]="user.role">
+                            <span *ngSwitchCase="'user'" class="role">Пользователь</span>
+                            <span *ngSwitchCase="'admin'" class="role">Администратор</span>
+                        </ng-container>
+                    </td>
+                    <td>
+                        <a [routerLink]="['/admin/users', user.id]" class="ms-4">
+                            <img src="../../../../assets/images/administration/users-management/icon-edit.svg" alt="Edit" width="24" height="24">
+                        </a>
+                        <a (click)="onDelete(user.id)" class="ms-4">
+                            <img src="../../../../assets/images/administration/users-management/icon-delete.svg" alt="Delete" width="24" height="24">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

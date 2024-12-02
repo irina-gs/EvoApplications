@@ -1,0 +1,10 @@
+.container {
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+}
+
+.card-recipe {
+    background: var(--background-gradient);
+    border-radius: 30px;
+    padding: 1rem 1rem 2rem 1rem;
+}

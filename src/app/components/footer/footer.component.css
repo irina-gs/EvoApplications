@@ -1,0 +1,11 @@
+.footer {
+    border-top: 1.5px solid var(--color-border)
+}
+
+.footer-container {
+    padding: 3rem 2rem;
+}
+
+.footer-text {
+    color: var(--text-color-footer);
+}

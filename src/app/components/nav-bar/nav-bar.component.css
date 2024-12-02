@@ -1,0 +1,65 @@
+.navbar {
+    padding: 2.125rem 0;
+    border-bottom: 1.5px solid var(--color-border);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-black);
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    margin-top: 2.3rem;
+    width: 14rem;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+}
+
+.dropdown-item {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--text-color-light);
+    cursor: pointer;
+}
+
+.dropdown-item.text-dark {
+    color: var(--text-color-dark);
+}
+
+.dropdown-item.text-dark span {
+    font-weight: 500;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active {
+    background-color: var(--color-border);
+}
+
+.dropdown-item.text-red {
+    color: var(--text-red);
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+        gap: 0 !important;
+    }
+
+    .dropdown {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .dropdown-menu {
+        margin-top: 2.125rem;
+        left: auto;
+    }
+}

@@ -1,0 +1,13 @@
+<div class="modal-container">
+    <div class="d-flex gap-3 align-items-start px-4 pt-4">
+        <img *ngIf="isDelete" src="../../../assets/images/notification/icon-unsuccess.svg" alt="Unsuccess" width="40" height="40">
+        <div class="p-0">
+            <h3 class="modal-title mb-2">{{title}}</h3>
+            <p class="modal-message">{{message}}</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button (click)="cancel()" class="btn-secondary-custom">{{cancelText}}</button>
+        <button (click)="confirm()" [ngClass]="isDelete ? 'btn-delete-custom' : 'btn-primary-custom'">{{confirmText}}</button>
+    </div>
+</div>

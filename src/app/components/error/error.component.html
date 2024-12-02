@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between align-items-center">
+    <div class="text-container p-3">
+        <p class="error-number mb-2">{{numberError + ' ' + 'ОШИБКА'}}</p>
+        <h1 class="error-title">{{title}}</h1>
+        <p class="error-text mb-4">{{text}}</p>
+        <div class="d-flex flex-column gap-4">
+            <a (click)="goBack()" class="btn-link-custom">Назад →</a>
+            <a routerLink="/" class="btn-link-custom">На главную →</a>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="https://evo-academy.wckz.dev/assets/image/image_404.png" alt="Ошибка" class="img-fluid">
+    </div>
+</div>

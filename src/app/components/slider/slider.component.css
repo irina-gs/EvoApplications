@@ -1,0 +1,55 @@
+.slider-container {
+    margin-bottom: 9.375rem;
+}
+
+.carousel ::ng-deep .carousel-control-prev .icon-prev,
+.carousel ::ng-deep .carousel-control-next .icon-next {
+    display: none;
+}
+
+.recipe-slide {
+    margin: 0 3.75rem;
+    height: 40rem;
+    border-radius: 30px;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 3.75rem;
+}
+
+.description {
+    color: var(--color-black-60);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.badge {
+    background-color: var(--color-black-5);
+    border-radius: 30px;
+}
+
+.btn-primary-custom {
+    border-radius: 16px;
+    padding: 1.25rem 2.25rem;
+    font-weight: 600;
+}
+
+.image-slider {
+    object-fit: cover;
+    max-height: 40rem;
+}
+
+.next-slide {
+    width: 2.5rem;
+    height: 95%;
+    border-radius: 30px;
+    background-color: var(--background-color);
+}
+
+.next-slide.position-absolute.end-0 {
+    transform: translateX(50%);
+}

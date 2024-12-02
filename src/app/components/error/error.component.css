@@ -1,0 +1,38 @@
+.text-container {
+    margin-left: 2rem;
+}
+
+.error-number {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.error-title {
+    color: var(--text-color-dark);
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.error-text {
+    color: var(--text-color-auth);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.btn-link-custom {
+    font-size: 1rem;
+}
+
+.image-container {
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

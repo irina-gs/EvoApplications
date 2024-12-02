@@ -1,0 +1,75 @@
+h3 {
+    font-weight: 800;
+    font-size: 1.875rem;
+    color: var(--text-color-dark);
+}
+
+.form-container {
+    font-size: 0.875rem;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+    width: 100%;
+    max-width: 28rem;
+}
+
+label {
+    color: var(--text-color-light);
+    font-weight: 500;
+    font-size: 0.875;
+}
+
+label.checkbox-label {
+    color: var(--text-color-dark);
+    font-weight: 400;
+}
+
+input {
+    color: var(--text-color-dark);
+    font-weight: 400;
+    font-size: 0.875rem;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-color: var(--color-border-auth);
+}
+
+input.is-invalid {
+    color: var(--invalid-color-auth);
+    border-color: var(--invalid-border-color-auth);
+}
+
+.checkbox {
+    background-color: var(--color-white);
+    width: 1rem;
+    height: 1rem;
+}
+
+.checkbox:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox:focus {
+    box-shadow: none;
+}
+
+.checkbox:hover {
+    border-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.checkbox:active {
+    background-color: var(--primary-color);
+}
+
+.btn-primary-custom {
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+hr.flex-grow-1 {
+    border-color: var(--color-border-auth);
+}
+
+span.span-muted {
+    color: var(--text-color-auth);
+}

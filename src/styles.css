@@ -1,1 +1,170 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-black: #000000;
+    --color-black-5: rgba(0, 0, 0, 0.05);
+    --color-black-10: rgba(0, 0, 0, 0.1);
+    --color-black-60: rgba(0, 0, 0, 0.6);
+    --color-white: #FFFFFF;
+
+    --primary-color: #3A3395;
+    --primary-color-dark: #211a7a;
+    --primary-color-light: #685fd4;
+    --red-color: #DD0035;
+
+    --text-color-dark: #111827;
+    --text-color-light: #374151;
+    --text-red: #BE2D2D;
+    --text-description: #606060;
+    --text-description-form: #707070;
+    --text-color-purple: #4338CA;
+    --text-color-green: #065F46;
+    --text-color-blue: #1E40AF;
+
+    --background-color: #E7FAFE;
+    --background-color-purple: #EEF2FF;
+    --background-color-light-purple: #DBEAFE;
+    --background-color-light-green: #D1FAE5;
+    --background-light-blue: #E7F9FD;
+    --background-gradient: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);
+
+    --color-border: #F2F2F2;
+    --color-border-form: #E5E7EB;
+
+    --text-color-footer: #9CA3AF;
+
+    --text-color-user-card: #909090;
+
+    --color-border-auth: #D1D5DB;
+    --text-color-auth: #6B7280;
+    --invalid-color-auth: #7F1D1D;
+    --invalid-border-color-auth: #FCA5A5;
+
+    --color-modal-window: #F9FAFB;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+button:active,
+a:active {
+    transform: scale(0.98);
+}
+
+button:disabled,
+a:disabled {
+    transform: none;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 0.625rem 1.125rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.btn-primary-custom:hover,
+.btn-primary-custom:active {
+    background-color: var(--primary-color-dark);
+}
+
+.btn-primary-custom:disabled {
+    background-color: var(--primary-color-light);
+    cursor: not-allowed;
+}
+
+.btn-secondary-custom {
+    background-color: var(--color-white);
+    color: var(--text-color-light);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1.125rem;
+    border: 1px solid var(--color-border-auth);
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.btn-secondary-custom:hover,
+.btn-secondary-custom:active {
+    background-color: var(--color-border);
+    border-color: var(--color-border-auth);
+}
+
+.btn-secondary-custom:disabled {
+    cursor: not-allowed;
+}
+
+.btn-delete-custom {
+    background-color: var(--red-color);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.625rem 1.125rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.btn-delete-custom:hover,
+.btn-delete-custom:active {
+    background-color: var(--text-red);
+}
+
+.btn-link-custom {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.btn-link-custom:hover,
+.btn-link-custom:active {
+    color: var(--primary-color-dark);
+}

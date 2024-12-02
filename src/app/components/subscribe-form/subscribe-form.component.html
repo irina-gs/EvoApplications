@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="form-container row align-items-center">
+
+        <div class="col-md-8">
+            <h1 class="title">Хотите получать новые рецепты?</h1>
+            <p class="text">Не пропустите ни одного вкусного рецепта! Подпишитесь на нашу рассылку, чтобы получать новые кулинарные идеи и рецепты прямо в свою почту.</p>
+        </div>
+
+        <div class="col-md-4">
+            <form>
+                <div class="input-group gap-2">
+                    <input type="email" required email #emailField="ngModel" name="email" [(ngModel)]="email" placeholder="Введите ваш email..." class="form-control rounded-2">
+                    <button type="submit" [disabled]="emailField.invalid" (click)="subscribe()" class="btn-primary-custom rounded-2">Подписаться</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

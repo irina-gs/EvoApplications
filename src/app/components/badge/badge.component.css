@@ -1,0 +1,19 @@
+.badge {
+    background-color: transparent;
+} 
+
+.badge-text {
+    margin-left: 0.625rem;
+}
+
+.title {
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.text {
+    color: var(--color-black-60);
+    font-weight: 500;
+    font-size: 0.875rem;
+}

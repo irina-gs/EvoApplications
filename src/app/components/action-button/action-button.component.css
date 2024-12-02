@@ -1,0 +1,19 @@
+a:hover,
+a:active {
+    filter: brightness(0.9);
+}
+
+.button-container {
+    background-color: var(--background-color);
+    padding: 1.75rem;
+}
+
+.title {
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

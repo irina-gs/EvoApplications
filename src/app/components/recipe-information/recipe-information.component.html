@@ -1,0 +1,79 @@
+<div class="container">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-8 col-12 pe-4">
+            <h1 class="recipe-title mb-5">{{recipe.title}}</h1>
+            
+            <div class="d-flex flex-lg-row flex-column align-items-center mb-5">
+
+                <app-user-card class="me-3 pe-3"
+                    [title]="recipe.author?.firstName + ' ' + recipe.author?.lastName"
+                    [text]="recipe.updatedOn ?? '' | dateFormat" 
+                    [avatar]="recipe.author?.avatar ?? ''"
+                ></app-user-card>
+
+                <div class="border-start mx-4"></div>
+
+                <app-badge 
+                    [image]="'../../../assets/images/recipe/icon-time.svg'" 
+                    [title]="'ВРЕМЯ ПРИГОТОВЛЕНИЯ'"
+                    [text]="recipe.timeCooking + ' Минут'"
+                ></app-badge>
+
+                <ng-container *ngFor="let tag of recipe.tags">
+                    <div class="border-start mx-4"></div>
+                    <app-badge
+                        [image]="'../../../assets/images/recipe/icon-category.svg'" 
+                        [text]="tag"
+                    ></app-badge>
+                </ng-container>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-12 d-flex justify-content-end ps-3">
+            <app-action-button [image]="isFavorite ? '../../../assets/images/action-button/icon-star-red.svg' : '../../../assets/images/action-button/icon-star.svg'" [title]="'В ИЗБРАННОЕ'" [onClick]="toggleFavorite.bind(this)" class="action-button"></app-action-button>
+            <app-action-button [image]="'../../../assets/images/action-button/icon-printer.svg'" [title]="'РАСПЕЧАТАТЬ'" [onClick]="print.bind(this)" class="action-button"></app-action-button>
+            <app-action-button [image]="'../../../assets/images/action-button/icon-share.svg'" [title]="'ПОДЕЛИТЬСЯ'" [onClick]="share.bind(this)" class="action-button"></app-action-button>
+        </div>
+
+    </div>
+
+
+    <div class="row mt-3">
+
+        <div class="col-md-8 col-12 pe-4">
+            <img [src]="recipe.image" class="recipe-image img-fluid" alt="Recipe image">
+        </div>
+
+        <div class="energy-value-container col-md-4 col-12 d-flex flex-column justify-content-between ps-3">
+            <ul class="list-group list-group-flush">
+                <h3 class="energy-value-title">Пищевая ценность</h3>
+                <li class="list-group-item d-flex justify-content-between px-0 py-3">
+                    <span class="title">Калории</span>
+                    <span class="value">{{recipe.foodValue?.calories}} ккал</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0 py-3">
+                    <span class="title">Жиры</span>
+                    <span class="value">{{recipe.foodValue?.fats}} г</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0 py-3">
+                    <span class="title">Углеводы</span>
+                    <span class="value">{{recipe.foodValue?.carbohydrates}} г</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0 py-3">
+                    <span class="title">Белки</span>
+                    <span class="value">{{recipe.foodValue?.proteins}} г</span>
+                </li>
+            </ul>
+
+            <span class="energy-value-footer text-center">Значения приблизительные</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <p class="recipe-description">{{recipe.body}}</p>
+    </div>
+
+</div>

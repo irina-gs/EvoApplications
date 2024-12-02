@@ -1,0 +1,37 @@
+.container {
+    margin-bottom: 3.125rem;
+}
+
+.tab-content {
+    border: 1px solid var(--color-border-form);
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+    overflow: hidden;
+}
+
+.table-head th {
+    background-color: var(--color-modal-window);
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color-auth);
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.table-body td {
+    padding: 1rem 1.5rem;
+}
+
+.table-body .badge {
+    background-color: var(--background-color-light-green);
+    color: var(--text-color-green);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.625rem;
+}
+
+.table-body .role {
+    color: var(--text-color-auth);
+    font-weight: 400;
+    font-size: 0.875rem;
+}

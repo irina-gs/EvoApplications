@@ -1,0 +1,31 @@
+.title {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-bottom: 3.75rem;
+}
+
+.comment-container {
+    margin-bottom: 1.875rem;
+}
+
+.new-comment-title {
+    padding-top: 1.25rem;
+    color: var(--text-color-light);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.new-comment {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--color-black);
+}
+
+.btn-secondary-custom {
+    background-color: var(--background-color-purple);
+    color: var(--text-color-purple);
+    font-weight: 500;
+    font-size: 0.875;
+    border: none;
+}

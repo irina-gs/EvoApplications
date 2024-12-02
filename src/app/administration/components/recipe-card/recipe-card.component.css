@@ -1,0 +1,24 @@
+.card {
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.card-image {
+    border-radius: 8px;
+    height: 12.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body h3 {
+    color: var(--text-color-dark);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.card-body p {
+    color: var(--text-color-auth);
+    font-weight: 500;
+    font-size: 0.875rem;
+}

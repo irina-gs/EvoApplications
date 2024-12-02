@@ -1,0 +1,17 @@
+<div class="page-container">
+    <app-slider [recipeList]="recipesSlider"></app-slider>
+    
+    <app-best-recipes [recipeList]="recipesBest"></app-best-recipes>
+    <hr>
+
+    <app-suggested-recipes 
+        [title]="'Попробуйте эти вкусные рецепты'"
+        [text]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempore tempora nostrum perferendis sit illum laborum ab, exercitationem soluta! Hic impedit tempore harum optio in.'"
+        [recipeList]="recipesSuggested"
+    ></app-suggested-recipes>
+    <hr>
+
+    <app-why-choose-us></app-why-choose-us>
+
+    <app-subscribe-form></app-subscribe-form>
+</div>

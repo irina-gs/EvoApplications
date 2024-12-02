@@ -1,0 +1,22 @@
+<div class="container">
+
+    <ng-container *ngIf="!text">
+        <h1 class="text-center title">{{title}}</h1>
+    </ng-container>
+
+    <ng-container *ngIf="text">
+        <div class="row align-items-center">
+            <h1 class="title col-md-6">{{title}}</h1>
+            <p class="text col-md-6">{{text}}</p>
+        </div>
+    </ng-container>
+
+    <div class="cards row justify-content-center mt-6">
+        <div *ngFor="let recipe of recipeList" class="col-md-3 col-12 px-3">
+            <div class="h-100">
+                <app-recipe-card [recipe]="recipe"></app-recipe-card>
+            </div>
+        </div>
+    </div>
+
+</div>

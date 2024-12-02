@@ -1,0 +1,39 @@
+a:hover .card,
+a:active .card {
+    transform: scale(1.05);
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+}
+
+.card-img {
+    border-radius: 20px;
+    width: 11.25rem;
+    height: 7.5rem;
+    overflow: hidden;
+}
+
+.card-img img {
+    object-fit: cover;
+}
+
+.card-body {
+    width: 13.75rem;
+}
+
+.card-title {
+    color: var(--color-black);
+    font-size: 1.25rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-author {
+    color: var(--color-black-60);
+    font-size: 0.875rem;
+    font-weight: 500;
+}

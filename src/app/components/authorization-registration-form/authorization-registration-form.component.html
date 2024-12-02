@@ -1,0 +1,56 @@
+<div class="d-flex flex-column justify-content-center align-items-center gap-4 my-5">
+    <h3 class="text-center">{{title}}</h3>
+
+    <form [formGroup]="form" (ngSubmit)="sendData()" class="form-container d-flex flex-column gap-4">
+
+        <div>
+            <label for="username" class="form-label mb-1">Логин</label>
+            <input type="text" id="username" formControlName="username" class="form-control" [ngClass]="{'is-invalid': username?.invalid && (username?.dirty || username?.touched)}">
+        </div>
+
+        <div>
+            <label for="password" class="form-label mb-1">Пароль</label>
+            <input type="password" id="password" formControlName="password" class="form-control" [ngClass]="{'is-invalid': password?.invalid && (password?.dirty || password?.touched)}">
+        </div>
+
+        <ng-container *ngIf="!isRegistration">
+            <div class="d-flex align-items-center">
+                <input type="checkbox" id="quick-session" formControlName="quickSession" class="form-check-input checkbox m-0">
+                <label for="quick-session" class="form-check-label ms-2 checkbox-label">Быстрая сессия</label>
+                <a routerLink="/registration" class="btn-link-custom ms-auto">Зарегистрироваться</a>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="isRegistration">
+            <div>
+                <label for="firstName" class="form-label mb-1">Имя</label>
+                <input type="text" id="firstName" formControlName="firstName" class="form-control">
+            </div>
+
+            <div>
+                <label for="lastName" class="form-label mb-1">Фамилия</label>
+                <input type="text" id="lastName" formControlName="lastName" class="form-control">
+            </div>
+
+            <div>
+                <label for="middleName" class="form-label mb-1">Отчество (при наличии)</label>
+                <input type="text" id="middleName" formControlName="middleName" class="form-control">
+            </div>
+        </ng-container>
+
+        <button type="submit" [disabled]="form.invalid" class="btn-primary-custom">{{buttonText}}</button>
+
+        <ng-container *ngIf="!isRegistration">
+            <div class="d-flex align-items-center">
+                <hr class="flex-grow-1">
+                <span class="mx-2 span-muted">Или войти через</span>
+                <hr class="flex-grow-1">
+            </div>
+
+            <a class="btn-secondary-custom">
+                <img src="../../../assets/images/authorization/social-icon-github.svg" alt="GitHub" width="20" height="20">
+            </a>
+        </ng-container>
+
+    </form>
+</div>
